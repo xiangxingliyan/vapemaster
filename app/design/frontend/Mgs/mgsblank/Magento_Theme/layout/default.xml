@@ -49,7 +49,8 @@
         <referenceBlock name="advanced-search-link" remove="true"/>
         <referenceBlock name="skip_to_content" remove="true"/>
         <referenceBlock name="authentication-popup" remove="true"/>
-		
+
+
 		<referenceContainer name="footer-container">
             <block class="Magento\Theme\Block\Html\Footer" name="footer" template="Magento_Theme::html/footer.phtml"/>
         </referenceContainer>

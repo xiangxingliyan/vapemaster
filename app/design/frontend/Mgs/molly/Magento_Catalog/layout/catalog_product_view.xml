@@ -54,6 +54,8 @@
 									</arguments>
 								</block>
 							</container>
+								<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="product/view/attribute_table.phtml" after="-"></block>
+
 						</container>
 						<container name="alert.urls" as="alert_urls" label="Alert Urls" after="product.infomation"/>
 						<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.overview" template="product/view/attribute.phtml" group="detailed_info" after="alert.urls" ifconfig="mpanel/product_details/short_description">
@@ -93,17 +95,11 @@
 							</container>
 						</container>
 						<container name="product.info.table" label="Product auxiliary info" after="product.info.extrahint" htmlTag="div" htmlClass="product-info-stock-sku">
-							<block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="product/view/attribute_table.phtml" after="-"></block>
-							<block class="Magento\Catalog\Block\Product\View" name="product.info.mailto" after="product.info.sku" template="product/view/mailto.phtml"/>
+							<block class="Magento\Catalog\Block\Product\View" name="product.info.mailto" after="-" template="product/view/mailto.phtml"/>
 						</container>
 						<block class="Magento\Cms\Block\Block" name="share.this.block" after="product.info.table">
 							<arguments><argument name="block_id" xsi:type="string">share_this_block</argument></arguments>
 						</block>
-						<container name="product.custom.block.top" after="share.this.block" htmlTag="div" htmlClass="product-custom-static">
-							<block class="Magento\Cms\Block\Block" name="product.custom.top">
-								<arguments><argument name="block_id" xsi:type="string">custom_static_block_top</argument></arguments>
-							</block>
-						</container>
 					</container>
            
 			</container>
@@ -150,11 +146,11 @@
                 </arguments>
             </block>
             <block class="Magento\Catalog\Block\Product\View\Additional" name="product.info.additional" as="product_additional_data"/>
-			<container name="product.custom.block.bottom"  htmlTag="div" htmlClass="product-custom-static">
+			<!--<container name="product.custom.block.bottom"  htmlTag="div" htmlClass="product-custom-static">
 				<block class="Magento\Cms\Block\Block" name="product.custom.bottom">
 					<arguments><argument name="block_id" xsi:type="string">custom_static_block_bottom</argument></arguments>
 				</block>
-			</container>
+			</container>-->
         </referenceContainer>
 		<referenceContainer name="sidebar.main">
 			<container name="product.custom.block.colright"  htmlTag="div" htmlClass="block">

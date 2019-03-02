@@ -41,7 +41,23 @@
 				
 				<block class="MGS\Mmegamenu\Block\Mmegamenu" name="megamenu" template="MGS_Mmegamenu::navigation.phtml" cacheable="false"/>
 			</block>
-        </referenceContainer>  
+        </referenceContainer>
+
+        <!--禁用评论-->
+        <referenceBlock name="reviews.tab" remove="true" />
+        <referenceBlock name="customer-account-navigation-product-reviews-link" remove="true" />
+        <referenceBlock name="customer_account_dashboard_info1" remove="true" />
+        <referenceBlock name="review_customer_list" remove="true" />
+        <referenceBlock name="customers_review" remove="true" />
+        <referenceBlock name="product.review.form" remove="true" />
+        <referenceBlock name="review_view" remove="true" />
+        <referenceBlock name="product.info.product_additional_data" remove="true" />
+        <referenceBlock name="product.info.review" remove="true" />
+
+        <!--禁用compare功能-->
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceBlock name="category.product.addto.compare" remove="true"/>
 		
         <move element="top.search" destination="header"/>
 		<move element="top.search.show" destination="header"/>
