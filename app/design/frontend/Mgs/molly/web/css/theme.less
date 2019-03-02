@@ -168,7 +168,7 @@ select {
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
-    height: 50px;
+    height: 40px;
     margin-bottom: 10px;
     border: 1px solid #afafaf;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
@@ -239,10 +239,15 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
     padding: 13px 29px;
 }
 .btn-default {
-    background: transparent;
+    background: #fff;
     color: #222222;
     border: 1px solid #222222;
 }
+
+.btn-default.btn-default-save{
+    padding: 6px 18px;
+}
+
 .btn-default:hover,.btn-default:focus,.btn-default:active {
     background-color: #222;
     color: #fff;
@@ -508,7 +513,6 @@ ul,ol {
         float: left;
         margin:0;
         padding:0;
-        text-aglin:center;  
     }
 
 }
@@ -3116,18 +3120,7 @@ body:not(.cms-index-index) {
     }
 }
 //CHECKOUT SUCCESS
-.checkout-onepage-success {
-    overflow-y: hidden;
-    .checkout-success {
-        padding: 30px 0;
-        color: #222; 
-        .actions-toolbar {
-            .continue {
-                color: @base-color;
-            }
-        }
-    }
-}
+
 .field-tooltip {
     cursor: pointer;
     position: absolute;
@@ -3322,6 +3315,12 @@ body:not(.cms-index-index) {
     }
 
 }
+
+.form-edit-account .actions-toolbar .btn {
+    padding: 6px 20px;
+}
+
+
 .my-account-main{
     .block-title{
         color:#202020;
@@ -3336,6 +3335,23 @@ body:not(.cms-index-index) {
     }
 
 }
+
+.block-addresses-default .box-actions .action.edit{
+    font-size: 15px;
+}
+
+.block-addresses-default .box{
+    margin-bottom: 20px;
+}
+
+.my-account-main address{
+    margin-bottom: 0;
+}
+
+.form-newsletter-manage .choice{
+    margin-bottom: 10px;
+}
+
 
 .block.block-dashboard-addresses.my-account-main {
     margin-top: 80px;
@@ -3391,6 +3407,9 @@ body:not(.cms-index-index) {
     .product-item-name{
         font-size: 16px;
         font-weight: 400;
+        margin-bottom: 10px;
+        display: block;
+        padding-right: 10%;
     }
     .product-item-inner{
         float: left;
@@ -3398,6 +3417,13 @@ body:not(.cms-index-index) {
     .actions-toolbar{
         margin-top: 30px;
         float:left;
+        .tocart.btn-default{
+            background: #000;
+            color: #fff;
+        }
+        .button{
+            margin-right: 5px;
+        }
     }
     .product-item-actions{
         position: absolute;
@@ -3405,8 +3431,13 @@ body:not(.cms-index-index) {
         top:15px;
         font-size: 16px;
         a{
-            margin-right: 15px;
-            color:@base-color;
+            margin-right: 5px;
+            color: #666;
+            font-size: 18px;
+            &:hover{
+                color: #b66a6a;
+            }
+
         }
     }
     .box-tocart {
@@ -3416,7 +3447,17 @@ body:not(.cms-index-index) {
             margin-bottom: 24px;
         }
     }
+    .price{
+        color: #000;
+        font-size: 14px;
+    }
 }
+
+.account .sidebar-main .sidebar.sidebar-additional{
+    display: none;
+}
+
+
 // Massage
 
 .message {
@@ -3846,7 +3887,7 @@ body:not(.cms-index-index) {
             float:left;
             display:block;
             top:0;
-            margin: 7px 0 0;
+            margin: 16px 0 0;
             width:auto;
         }
     }
