@@ -8,24 +8,24 @@
 
 ?>
 <h4 class="title">Newsletter</h4>
-<div class="content">
+<div class="content clearfix">
 	<form class="form subscribe"
 		novalidate
 		action="<?php /* @escapeNotVerified */ echo $block->getFormActionUrl() ?>"
 		method="post"
 		data-mage-init='{"validation": {"errorClass": "mage-error"}}'
 		id="newsletter-validate-detail-sub">
-		<div class="field newsletter">
+		<div class="field newsletter col-sm-8 no-padding">
 			<label class="label" for="newsletter"><span><?php /* @escapeNotVerified */ echo __('Sign Up for Our Newsletter:') ?></span></label>
 			<div class="control">
-				<input class="input-text" name="email" type="email" id="newsletter-sub"
+				<input class="input-text 123" style="border: 0;" name="email" type="email" id="newsletter-sub"
 							placeholder="<?php /* @escapeNotVerified */ echo __('Enter your email address') ?>"
 							data-validate="{required:true, 'validate-email':true}"/>
 			</div>
 		</div>
-		<div class="actions">
+		<div class="actions col-sm-4 no-padding">
 			<button class="action subscribe primary btn btn-primary" title="<?php /* @escapeNotVerified */ echo __('Subscribe') ?>" type="submit">
-				<span><?php /* @escapeNotVerified */ echo __('Subscribe') ?></span>
+				<span><?php /* @escapeNotVerified */ echo __('SIGN ME UP') ?></span>
 			</button>
 		</div>
 	</form>
