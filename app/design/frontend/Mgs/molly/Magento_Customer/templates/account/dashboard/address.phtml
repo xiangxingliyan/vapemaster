@@ -8,13 +8,21 @@
 
 /** @var \Magento\Customer\Block\Account\Dashboard\Address $block */
 ?>
-<hr />
+
 <div class="block block-dashboard-addresses my-account-main">
     <div class="block-content">
+		<div class="block-title">
+			<h4><?php /* @escapeNotVerified */ echo __('Address Book') ?></h4>
+		</div>
+
+		<div class="text-left">
+			<a class="action edit manage-addresses-link " href="<?php /* @escapeNotVerified */ echo $block->getAddressBookUrl() ?>"><span><?php /* @escapeNotVerified */ echo __('Manage Addresses') ?></span></a>
+		</div>
+
 		<div class="row">
 			<div class="box box-billing-address col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<div class="block-title">
-					<h3><?php /* @escapeNotVerified */ echo __('Default Billing Address') ?></h3>
+				<div class="block-sub-title">
+					<h4><?php /* @escapeNotVerified */ echo __('Default Billing Address') ?></h4>
 				</div>
 				<div class="box-content">
 					<address>
@@ -26,8 +34,8 @@
 				</div>
 			</div>
 			<div class="box box-shipping-address col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<div class="block-title">
-					<h3><?php /* @escapeNotVerified */ echo __('Default Shipping Address') ?></h3>
+				<div class="block-sub-title">
+					<h4><?php /* @escapeNotVerified */ echo __('Default Shipping Address') ?></h4>
 				</div>
 				<div class="box-content">
 					<address>
@@ -40,7 +48,5 @@
 			</div>
 		</div>
     </div>
-	<div class="text-right">
-        <a class="action edit btn btn-lg btn-secondary" href="<?php /* @escapeNotVerified */ echo $block->getAddressBookUrl() ?>"><span><?php /* @escapeNotVerified */ echo __('Manage Addresses') ?></span></a>
-    </div>
+
 </div>

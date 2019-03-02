@@ -18,7 +18,7 @@
                 </block>
                 <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-account-navigation-account-edit-link" ifconfig="mpanel/customer/account_information">
                     <arguments>
-                        <argument name="label" xsi:type="string" translate="true">Account Information</argument>
+                        <argument name="label" xsi:type="string" translate="true">Personal Information</argument>
                         <argument name="path" xsi:type="string">customer/account/edit</argument>
                     </arguments>
                 </block>

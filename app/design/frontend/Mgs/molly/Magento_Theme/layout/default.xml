@@ -51,6 +51,10 @@
         <referenceBlock name="authentication-popup" remove="true"/>
 		<referenceBlock name="page.main.title" remove="true"/>
 		<referenceBlock name="navigation.sections" remove="true"/>
+        <referenceBlock name="customer-account-navigation-my-credit-cards-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-billing-agreements-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-downloadable-products-link" remove="true"/>
+        <referenceBlock name="customer-account-navigation-product-reviews-link" remove="true"/>
         <!--referenceContainer name="footer-container">
             <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/footer.phtml"/>
         </referenceContainer-->

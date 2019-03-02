@@ -24,7 +24,7 @@ html, body {
     overflow-x:hidden 
 } 
 body {
-    color: #878787;
+    color: #000;
     font-size: 14px;
     text-align: left;
     font-weight: 400;
@@ -502,7 +502,8 @@ ul,ol {
     }
     // Navigation
     .navbar-collapse{
-        background-color: @base-color;
+        background-color: transparent;
+        border-bottom: 1px solid #e7e7e7;
         width: 100%;
         float: left;
         margin:0;
@@ -3286,7 +3287,7 @@ body:not(.cms-index-index) {
 .account-nav{
     ul{
         li{
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #bfbfbf;
             float: left;
             height: auto;
             width: 100%;
@@ -3326,6 +3327,7 @@ body:not(.cms-index-index) {
         color:#202020;
         margin-bottom:10px;
         font-weight: 700;
+        border-bottom: solid 1px #e0e0e0;
     }
     .box-actions {
         a{
@@ -3333,6 +3335,25 @@ body:not(.cms-index-index) {
         }
     }
 
+}
+
+.block.block-dashboard-addresses.my-account-main {
+    margin-top: 80px;
+}
+
+
+.dashboard-welcome-tips {
+    margin-bottom: 60px;
+}
+
+.my-account-main .box-actions a{
+    color: #b66a6a;
+}
+
+.manage-addresses-link {
+    margin: 20px 0 15px 0;
+    display: block;
+    font-size: 16px;
 }
 
 .form-edit-account{
@@ -4607,7 +4628,7 @@ body:not(.cms-index-index) {
                 position: relative;
                 text-transform: uppercase;
                 &:after {
-                    background-color: #eeeeee;
+                    background-color: #848080;
                     content: "";
                     height: 1px;
                     left: 100%;
