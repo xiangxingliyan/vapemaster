@@ -50,6 +50,10 @@ select:disabled {
     opacity: .5;
 }
 
+.action.back{
+    display: none;
+}
+
 .rating-summary, .view-mode{
     display: none!important;
 }
@@ -202,12 +206,13 @@ textarea {
 }
 .form-control:focus, .input-text:focus {
     border: solid 1px #333;
+    box-shadow: none;
 }
 .form-control {
     background-color: #ffffff;
     margin-bottom: 10px;
     .border-radius (0);
-    height: 50px;
+    height: 40px;
 }
 .form-group {
     margin-bottom: 15px;
@@ -413,7 +418,7 @@ ul,ol {
                 &.minicart-wrapper {
                     .subtitle.empty {
                         font-weight: 400;
-                        color: 	rgb(135,​ 135,​ 135);
+                        color: 	#878787;
                         font-size: 14px;
                     }
                 }
@@ -2179,6 +2184,11 @@ body:not(.cms-index-index) {
                 margin-right: 13px;
             }
         }
+
+        .box-tocart .actions .tocart{
+            padding: 9px 29px;
+        }
+
         .fotorama__thumb-border{
             border-color: #000;
         }
@@ -3426,9 +3436,9 @@ body:not(.cms-index-index) {
             a,strong{
                 text-transform: uppercase;
                 float: left;
-                padding-bottom: 17px;
+                padding-bottom: 10px;
                 padding-left: 22px;
-                padding-top:12px;
+                padding-top:20px;
                 color:#212121;
                 &:hover,&:focus{
                     background: none;
@@ -3439,6 +3449,7 @@ body:not(.cms-index-index) {
 
         }
         li.active,li.current{
+            border-bottom-color: @base-color;
             strong{
                 color:@base-color;
             }
@@ -3521,11 +3532,10 @@ body:not(.cms-index-index) {
     .country {
         select{
             background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-shadow: 0 1px 1px rgba(0,0,0,0.075);
+            border: 1px solid #afafaf;
 
-            height: 50px;
+
+            height: 40px;
             margin-bottom: 10px;
             padding: 6px 12px;            
             transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
@@ -6591,14 +6601,12 @@ body:not(.cms-index-index) .page.messages .messages .message {
         top: 0;
         width: 100%;
         display: block !important;
-        .transform(translateX(100%));
         .transition(all 900ms ease-in-out 0s);
         &.ready {
-            .transform(translateX(-100%));
+
         }
         &.active {
             position: relative;
-            .transform(translateX(0));
         }
         .products-grid .owl-item .item {
             margin-bottom: 0;
