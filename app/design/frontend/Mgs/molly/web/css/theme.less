@@ -252,6 +252,12 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
     border: 1px solid #222222;
 }
 
+.btn-black{
+    background: #222222;
+    color: #fff;
+    border: 1px solid #222222;
+}
+
 .btn-default.btn-default-save{
     padding: 6px 18px;
 }
@@ -286,7 +292,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
 // Link
 a {
     text-decoration: none;
-    color: #212121;
+    color: #000;
 }
 a:hover, a:focus {
     text-decoration: none;
@@ -669,6 +675,11 @@ ul,ol {
                                 margin-bottom: 12px;
                                 margin-top: 12px;
                                 min-height: 130px;
+                                padding-bottom: 10px;
+                                border-bottom: 1px solid #b3b3b3;
+                                &:last-child{
+                                    border-bottom: none;
+                                }
                                 .product {
 
                                     .product-item-photo{
@@ -692,15 +703,21 @@ ul,ol {
                                         padding-top: 10px;
                                         width: calc(~"100% - 95px");
                                         text-align:left;
+                                        margin-left: 0;
                                         .options {
                                             clear: both;
+                                            margin-bottom: 5px;
+                                        }
+                                        .label{
+                                            margin: 0;
                                         }
                                         .product-item-name{
                                             a{
                                                 color: #212121;
                                                 font-size:16px;
                                                 text-transform:none;
-                                                width: 190px;
+                                                width: calc(~'100% - 50px');
+                                                line-height: normal;
                                                 &:hover{color:@base-color;}
                                             }
                                         }
@@ -708,18 +725,20 @@ ul,ol {
                                             float:left;
                                             text-align: left;
                                             width:100%;
+                                            color: #191919;
 
                                         }
 
                                         .details-qty {
                                             width: 150px;
                                             float:left;
+                                            margin-top: 10px;
                                             .label {
                                                 display:none
                                             }
                                             input {
                                                 height: 35px;
-                                                width: 40px;
+                                                width: 50px;
                                                 color:#212121;
                                                 font-size:14px;
                                                 text-align: center;
@@ -742,16 +761,17 @@ ul,ol {
                                                 display: inline-block;
                                                 height: 35px;
                                                 margin-left: 5px;
+                                                border: 0;
                                             }
                                         }
                                         .actions {
                                             position: absolute;
                                             right: 0;
                                             top: 10px;
-                                            width:40px;
-                                            text-align: center;
-                                            color:@base-color;
-                                            a{color:@base-color;}
+                                            width:50px;
+                                            text-align: left;
+                                            color:#b66a6a;
+                                            a{color:#b66a6a;}
                                             .primary ,.secondary{
                                                 display:inline-block;
                                                 float:right;      
@@ -787,10 +807,8 @@ ul,ol {
                                         .product.options{
 
                                             dd{
-
-
-                                                margin: 2px 0;
-                                                padding: 0 10px 5px;
+                                                margin: 0;
+                                                padding: 0 10px 0;
 
                                             }
                                         }
@@ -806,12 +824,16 @@ ul,ol {
                     .subtotal{
                         border-top:1px solid rgba(0,0,0,0.15);
                         margin-top: 0;
-                        margin-bottom: 10px;
-                        padding-top:5px;
+                        margin-bottom: 15px;
+                        padding-top:15px;
                         float:left;
                         width: 100%;
+                        text-indent: 10px;
+                        line-height: normal;
                         text-align: left;
-
+                        .price{
+                            font-size: 18px;
+                        }
                     }
                     .actions {
                         text-align:left;
@@ -822,6 +844,8 @@ ul,ol {
                             float: none;
                             font-size: 14px;
                             padding: 13px 29px;
+                            background-color: #000;
+                            color: #fff;
                             &:hover{color:#fff;}
 
                         }
@@ -1419,9 +1443,9 @@ body:not(.cms-index-index) {
     clear: both;
 }
 
-body:not(.cms-index-index) #maincontent{
-    background-image: linear-gradient(0deg, #f8f8ff 0%, #ffffff 54%, #f8f8ff 100%);
-}
+//body:not(.cms-index-index) #maincontent{
+//    background-image: linear-gradient(0deg, #f8f8ff 0%, #ffffff 54%, #f8f8ff 100%);
+//}
 
 //STYLE FULL WIDTH
 .cms-index-index {
@@ -2302,6 +2326,9 @@ body:not(.cms-index-index) #maincontent{
                 }
             }
         }
+        .product-brand{
+            display: none;
+        }
         .product-infomation {
             padding-bottom: 10px;
             border-bottom: 1px solid #bfbfbf;
@@ -2466,6 +2493,10 @@ body:not(.cms-index-index) #maincontent{
 
 // Shopping Cart
 .checkout-cart-index {
+    .cart.table-wrapper{
+        border-bottom: 1px solid #000;
+    }
+
     .items {
         thead {
             th {
@@ -2482,16 +2513,29 @@ body:not(.cms-index-index) #maincontent{
             .item-info {
                 td {
                     vertical-align: middle;
+
                     .product-item-name a {
                         font-weight: 500;
                         font-size: 16px;
                     }
+                    &:first-child{
+                        text-align: center;
+                    }
                 }
+                .subtotal .price{
+                    color: #e70c0c;
+                }
+
                 .product-item-photo, .product-item-details {
                     display: inline-block;
+                    vertical-align: middle;
                 }
                 .product-item-details {
                     margin-left: 10px;
+                    .item-options{
+                        margin-top: 5px;
+                        margin-bottom: 0;
+                    }
                 }
                 .product-image-wrapper {
                     padding-bottom: 0 !important;
@@ -2503,6 +2547,10 @@ body:not(.cms-index-index) #maincontent{
                 }
                 .qty {
                     width: 70px;
+                    input{
+                        text-align: center;
+                        padding: 6px 4px 6px 14px;
+                    }
                 }
             }
             .item-actions {
@@ -2511,6 +2559,7 @@ body:not(.cms-index-index) #maincontent{
             .actions-toolbar {
                 a {
                     color: #aaa;
+                    font-size: 16px;
                 }
                 a:hover {
                     color: @base-color;
@@ -2529,7 +2578,7 @@ body:not(.cms-index-index) #maincontent{
         padding-top: 40px;
         padding-bottom: 50px;
         .title {
-            background-color: @base-color;
+            background-color: #b66a6a;
             padding: 15px;
             color: #fff;
             position: relative;
@@ -2562,7 +2611,7 @@ body:not(.cms-index-index) #maincontent{
             }
         }
         .content {
-            border: 1px solid @base-color;
+            border: 1px solid #b66a6a;
             padding: 15px;
         }
         .shipping {
@@ -2620,12 +2669,15 @@ body:not(.cms-index-index) #maincontent{
     }
     .cart.actions {
         text-align: right;
+        .btn{
+            margin-left: 5px;
+        }
     }
 	.checkout-methods-items {
 		button.checkout {
-			background: #e74c3c;
+			background: #b66a6a;
 			color: #fff;
-			border: 1px solid #e74c3c;
+			border: 1px solid #b66a6a;
 			padding: 14px 30px;
 			text-transform: uppercase;
 		}
@@ -2958,7 +3010,7 @@ body:not(.cms-index-index) #maincontent{
                 &:before {
                     background: #ccc none repeat scroll 0 0;
                     content: "";
-                    height: calc(100% - 20px);
+                    height: calc(~'100% - 20px');
                     left: 0;
                     position: absolute;
                     top: 0;
@@ -3874,7 +3926,7 @@ body:not(.cms-index-index) #maincontent{
                 }
                 .text{
                     display:inline-block;
-                    width:calc(100% - 30px);
+                    width:calc(~'100% - 30px');
                 }
             }
         }
