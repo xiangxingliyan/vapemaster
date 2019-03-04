@@ -66,7 +66,7 @@
 			<?php $i=0; foreach($conditionCate as $categoryId): $i++; ?>
 				<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); ?>
 				<?php $currentCate = $objectManager->create('Magento\Catalog\Model\Category')->load($categoryId); ?>
-				<li class="item title <?php if( $i == 1 ): ?>active<?php endif ?>">
+				<li class="item title col-sm-4 <?php if( $i == 1 ): ?>active<?php endif ?>">
 					<a data-number="<?php echo $i ?>" data-toggle="tab" href="#panel-product-<?php echo $categoryId ?>"><?php echo $currentCate->getName(); ?></a>
 				</li>
 			<?php endforeach ?>

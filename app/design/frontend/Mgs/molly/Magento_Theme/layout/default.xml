@@ -39,7 +39,7 @@
 				
 				<!--block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml" /-->
 				
-				<block class="MGS\Mmegamenu\Block\Mmegamenu" name="megamenu" template="MGS_Mmegamenu::navigation.phtml" cacheable="false"/>
+				<block class="MGS\Mmegamenu\Block\Mmegamenu" name="mgs-megamenu" template="MGS_Mmegamenu::navigation.phtml" cacheable="false"/>
 			</block>
         </referenceContainer>
 
