@@ -42,6 +42,10 @@ body {
     padding-right: 12px;
 }
 
+.alert{
+    margin-bottom: 0;
+}
+
 :focus{
     outline: 0;
 }
@@ -265,6 +269,10 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
     background: #222222;
     color: #fff;
     border: 1px solid #222222;
+}
+
+.btn-black:hover{
+    color: #fff;
 }
 
 .btn-default.btn-default-save{
@@ -1709,7 +1717,7 @@ body:not(.cms-index-index) {
     }
 }
 .price {
-    color: @base-color;
+    color: #e70c0c;
     font-size: 18px;
     font-weight: 700;
 }
@@ -2594,7 +2602,7 @@ body:not(.cms-index-index) {
         padding-bottom: 50px;
         .title {
             background-color: #b66a6a;
-            padding: 15px;
+            padding: 15px 25px;
             color: #fff;
             position: relative;
             text-transform: uppercase;
@@ -2603,11 +2611,11 @@ body:not(.cms-index-index) {
             }
             &:after {
                 position: absolute;
-                right: 10px;
+                right: 20px;
                 top: 15px;
                 -webkit-font-smoothing: antialiased;
-                font-size: 12px;
-                line-height: 12px;
+                font-size: 18px;
+                line-height: 18px;
                 color: inherit;
                 content: "\f107";
                 font-family: FontAwesome;
@@ -2650,10 +2658,14 @@ body:not(.cms-index-index) {
         }
         .totals {
             tbody {
-                border: 1px solid @base-color;
+                border: 1px solid #b66a6a;
+                > tr > th, > tr > td{
+                    vertical-align: middle;
+                    padding-left: 15px;
+                }
             }
             .table-caption {
-                background-color: @base-color;
+                background-color: #b66a6a;
                 padding: 15px;
                 text-align: center;
                 font-weight: bold;
@@ -2684,6 +2696,7 @@ body:not(.cms-index-index) {
     }
     .cart.actions {
         text-align: right;
+        margin-top: 30px;
         .btn{
             margin-left: 5px;
         }
@@ -5019,6 +5032,7 @@ body:not(.cms-index-index) {
     }
     span.step {
         display: inline-block;
+        vertical-align: sub;
         margin-right: 10px;
         width: 16px;
         height: 16px;
