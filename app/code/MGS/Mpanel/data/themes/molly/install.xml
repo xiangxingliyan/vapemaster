@@ -97,7 +97,7 @@
 			<content><![CDATA[<div class="share-this-block"><span class="label-share">Share This:</span> <span class="st_sharethis_large">&nbsp;</span> <span class="st_facebook_large">&nbsp;</span> <span class="st_twitter_large">&nbsp;</span> <span class="st_linkedin_large">&nbsp;</span> <span class="st_pinterest_large">&nbsp;</span> <span class="st_email_large">&nbsp;</span></div>
 <script type="text/javascript">
 var switchTo5x=true;
-></script>
+</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script type="text/javascript">
 stLight.options({publisher: "d846940d-2e32-4b49-b61a-8df1df805d0a", doNotHash: false, doNotCopy: false, hashAddressBar: false});

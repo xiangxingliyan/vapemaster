@@ -13,7 +13,7 @@
 		<div class="tab-product-menu">
 			<ul class="nav nav-tabs tab-product category-tabs">
 				<?php $i=0; foreach($categories as $category): $i++ ?>
-					<li class="item title <?php if( $i == 1 ): ?>active<?php endif ?>">
+					<li class="item col-sm-4 title <?php if( $i == 1 ): ?>active<?php endif ?>">
 						<a data-number="<?php echo $i ?>" data-toggle="tab" href="#cttab-<?php echo $category->getId() ?>"><?php echo $category->getName(); ?></a>
 					</li>
 				<?php endforeach ?>
