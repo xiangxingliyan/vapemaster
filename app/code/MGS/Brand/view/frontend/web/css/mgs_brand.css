@@ -126,7 +126,7 @@ html, body {
 	margin-bottom: 30px;
 }
 .brand-brand-view .brand-info  .brand-image img {
-	width: 100%;
+	margin: 0 auto;
 }
 .block-brand ul.brand-list li {
     border-bottom: 1px solid #ddd;

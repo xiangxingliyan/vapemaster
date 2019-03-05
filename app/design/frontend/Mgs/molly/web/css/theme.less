@@ -4017,6 +4017,9 @@ body:not(.cms-index-index) {
             margin-bottom: 60px;
             text-align: left;
         }
+        .bottom-footer-link{
+            padding-left: 15px;
+        }
         .bottom-footer-secure-list{
             a{
                 float: left;
@@ -4055,7 +4058,7 @@ body:not(.cms-index-index) {
             float:left;
             display:block;
             top:0;
-            margin: 16px 0 0;
+            margin: 7px 0 0;
             width:auto;
         }
     }
@@ -4622,6 +4625,9 @@ body:not(.cms-index-index) {
                             span {
                                 position: relative;
                                 padding-right: 10px;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
                                 &:after {
                                     background-color: #eeeeee;
                                     content: "";
@@ -5373,11 +5379,11 @@ footer {
         }
     }
 }
-.owl-theme{
-    .owl-controls{
-        margin: 0 !important;
-    }
-}
+//.owl-theme{
+//    .owl-controls{
+//        margin: 0 !important;
+//    }
+//}
 // Testimonial in page about
 .testimonials-center {
     .testimonial-item{
@@ -5498,6 +5504,7 @@ footer {
         height: 80px;
         font-size: 40px;
         background-color: #b56969;
+        border: 0;
     }
     .title, label {
         display: none;
@@ -5865,7 +5872,7 @@ footer {
     }
 }
 .products-grid .item {
-    margin-bottom: 23px;
+    margin-bottom: 15px;
 }
 // Deal
 .deals-special {
@@ -6625,6 +6632,7 @@ body:not(.cms-index-index) .page.messages .messages .message {
         }
         &.active {
             position: relative;
+            z-index: 2;
         }
         .products-grid .owl-item .item {
             margin-bottom: 0;
@@ -6835,6 +6843,10 @@ body:not(.cms-index-index) .page.messages .messages .message {
 			}
 		}
 	}
+}
+
+.mgs-brand-widget {
+    margin-bottom: 30px;
 }
 
 

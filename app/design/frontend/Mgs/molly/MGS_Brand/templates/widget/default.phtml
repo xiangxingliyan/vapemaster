@@ -78,15 +78,22 @@ $collection = $block->getBrandCollection();
             require([
                 'jquery',
                 'mage/mage',
-                'MGS_Brand/js/owl.carousel'
+                'mgs/owlcarousel'
             ], function ($) {
                 var owl = $('.mgs-carousel-<?php echo $blockId ?>');
                 owl.owlCarousel({
                     items: <?php echo $this->getConfig('items', 5); ?>,
-                    autoPlay: <?php echo $autoplay; ?>,
-					navigationText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+                    autoplay: <?php echo $autoplay; ?>,
+                    navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
                     stopOnHover: <?php echo $stopOnHover; ?>,
-                    navigation: <?php echo $navigation; ?>
+                    navigation: <?php echo $navigation; ?>,
+                    responsive: {
+                        0: {items: 3},
+                        480: {items: 3},
+                        768: {items: 3},
+                        980: {items: 4},
+                        1200: {items: 5}
+                    }
                 });
             });
         </script>
