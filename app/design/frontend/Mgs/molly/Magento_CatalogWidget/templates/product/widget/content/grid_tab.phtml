@@ -75,7 +75,7 @@
 	</div>
 	<div class="tab-content ">
 		<?php $j=0; foreach($conditionCate as $categoryId): $j++; ?>
-			<div id="panel-product-<?php echo $categoryId ?>" class="tab-pane container tab-pane<?php echo $j ?> fade <?php if( $j == 1 ): ?>in active<?php endif ?>">
+			<div id="panel-product-<?php echo $categoryId ?>" class="tab-pane tab-pane<?php echo $j ?> fade <?php if( $j == 1 ): ?>in active<?php endif ?>">
 				<?php $categoryProducts = $themeHelper->getCategoryProducts($categoryId); ?>
 				<?php $objectManager1 = \Magento\Framework\App\ObjectManager::getInstance(); ?>
 				<?php $currentCate1 = $objectManager->create('Magento\Catalog\Model\Category')->load($categoryId); ?>
