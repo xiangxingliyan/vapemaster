@@ -61,30 +61,30 @@
 <?php if(isset($conditionCate) && is_array($conditionCate)): ?>
 <div class="category-tabs">
 	<div class="tab-product-menu">
-		<button id="show-menu-tabs-1" class="visible-xs show-menu-tabs"><span class="fa fa-bars"></span></button>
+<!--		<button id="show-menu-tabs-1" class="visible-xs show-menu-tabs"><span class="fa fa-bars"></span></button>-->
 		<ul class="nav nav-tabs tab-product category-tabs">
 			<?php $i=0; foreach($conditionCate as $categoryId): $i++; ?>
 				<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); ?>
 				<?php $currentCate = $objectManager->create('Magento\Catalog\Model\Category')->load($categoryId); ?>
-				<li class="item title col-sm-4 <?php if( $i == 1 ): ?>active<?php endif ?>">
+				<li class="item title col-sm-4 col-xs-4 <?php if( $i == 1 ): ?>active<?php endif ?>">
 					<a data-number="<?php echo $i ?>" data-toggle="tab" href="#panel-product-<?php echo $categoryId ?>"><?php echo $currentCate->getName(); ?></a>
 				</li>
 			<?php endforeach ?>
 		</ul>
 		<div class="clear"></div>
 	</div>
-	<div class="tab-content row">
+	<div class="tab-content ">
 		<?php $j=0; foreach($conditionCate as $categoryId): $j++; ?>
-			<div id="panel-product-<?php echo $categoryId ?>" class="tab-pane tab-pane<?php echo $j ?> fade <?php if( $j == 1 ): ?>in active<?php endif ?>">
+			<div id="panel-product-<?php echo $categoryId ?>" class="tab-pane container tab-pane<?php echo $j ?> fade <?php if( $j == 1 ): ?>in active<?php endif ?>">
 				<?php $categoryProducts = $themeHelper->getCategoryProducts($categoryId); ?>
 				<?php $objectManager1 = \Magento\Framework\App\ObjectManager::getInstance(); ?>
 				<?php $currentCate1 = $objectManager->create('Magento\Catalog\Model\Category')->load($categoryId); ?>
-				<ol class="product-items products-grid">
+				<ol class="product-items products-grid row">
 					<?php $iterator = 1; ?>
 					<?php $i=0; foreach ($categoryProducts as $_item): $i++; ?>
 						<?php if($i > $this->getProductsCount()){ break; } ?>
 						<?php $_productNameStripped = $block->stripTags($_item->getName(), null, true); ?>
-						<li class="item product product-item">
+						<li class="item product product-item col-lg-3 col-md-3 col-sm-3 col-xs-6 ">
 							<div class="product-item-info product-content">
 								<div class="product-top">
 									<?php
@@ -191,14 +191,14 @@
 					<?php endforeach ?>
 				</ol>
 			</div>
-			<script type="text/javascript">
+			<!--<script type="text/javascript">
 				require([
 				'jquery',
 				'MGS_Mpanel/js/owl.carousel.min'
 				], function(jQuery){
 					(function($) {
-						$("#panel-product-<?php echo $categoryId ?> .products-grid").owlCarousel({
-							items: <?php echo $perRow ?>,
+						$("#panel-product-<?php /*echo $categoryId */?> .products-grid").owlCarousel({
+							items: <?php /*echo $perRow */?>,
 							nav: true,
 							navText: ["<i class='fa fa-angle-left'	></i>","<i class='fa fa-angle-right'></i>"],
 							dots: false,
@@ -208,12 +208,12 @@
 								480 : {items: 2},
 								768 : {items: 2},
 								980 : {items: 3},
-								1200 : {items: <?php echo $perRow ?>}
+								1200 : {items: <?php /*echo $perRow */?>}
 							}
 						});
 					})(jQuery);
 				});
-			</script>
+			</script>-->
 		<?php endforeach ?>
 	</div>
 </div>
@@ -242,11 +242,7 @@ require([
 					$(this).parent().find('.nav-tabs').slideToggle('fast');
 					$(this).parent().find('.nav-tabs').addClass('menu-tab-mobile');
 				});
-				$(".nav-tabs").click(function(){
-					if($(this).hasClass('menu-tab-mobile')){
-						$(this).hide();
-					}
-				});
+
 			});
 		})(jQuery);
 	});
