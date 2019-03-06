@@ -24,18 +24,11 @@ class Install extends \MGS\Mpanel\Controller\Adminhtml\Mpanel
     protected $_string;
 	
 	/**
-     * @var \Magento\Framework\ObjectManagerInterface
-     */
-    protected $_objectManager;
-	
-	/**
 	 * @var \Magento\Framework\Xml\Parser
 	 */
 	private $_parser;
 	
 	protected $_filesystem;
-	
-	protected $_configTheme;
 	
 	/**
      * @param Action\Context $context
@@ -43,18 +36,14 @@ class Install extends \MGS\Mpanel\Controller\Adminhtml\Mpanel
      */
     public function __construct(
 		Action\Context $context,
-		\Magento\Framework\ObjectManagerInterface $objectManager,
 		\Magento\Config\Model\Config\Factory $configFactory,
 		\Magento\Framework\Filesystem $filesystem,
 		\Magento\Framework\Xml\Parser $parser,
-		\Magento\Theme\Model\Config $configTheme,
         \Magento\Framework\Stdlib\StringUtils $string
 	){
         parent::__construct($context);
 		$this->_configFactory = $configFactory;
-		$this->_configTheme = $configTheme;
         $this->_string = $string;
-		$this->_objectManager = $objectManager;
 		$this->_filesystem = $filesystem;
 		$this->_parser = $parser;
     }
@@ -99,11 +88,11 @@ class Install extends \MGS\Mpanel\Controller\Adminhtml\Mpanel
 					'groups' => $groups
 				];
 				
+				//echo '<pre>'; print_r($configData); die();
 				/** @var \Magento\Config\Model\Config $configModel  */
 				$configModel = $this->_configFactory->create(['data' => $configData]);
 				try {
 					$configModel->save();
-					
 					$this->messageManager->addSuccess(__('%1 theme was successfully installed.', $this->convertString($theme)));
 					
 					if (is_readable($staticBlocksFile))

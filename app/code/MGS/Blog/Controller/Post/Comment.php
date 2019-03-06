@@ -73,25 +73,6 @@ class Comment extends Action
             if ($error) {
                 throw new \Exception();
             }
-            if ($this->blogHelper->getConfig('recaptcha_settings/enabled')) {
-                $siteKey = $this->blogHelper->getConfig('recaptcha_settings/site_key');
-                $secret = $this->blogHelper->getConfig('recaptcha_settings/secret_key');
-				if(isset($_POST['g-recaptcha-response'])){
-					$captcha=$_POST['g-recaptcha-response'];
-				}
-				if(!$captcha){
-					$this->messageManager->addError(__('reCAPTCHA error'));
-                    $resultRedirect->setUrl($this->_redirect->getRefererUrl());
-                    return $resultRedirect;
-				}
-				$response=json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']), true);
-				
-                if ($response['success'] == false) {
-					$this->messageManager->addError(__('reCAPTCHA error'));
-                    $resultRedirect->setUrl($this->_redirect->getRefererUrl());
-                    return $resultRedirect;
-                }
-            }
             $comment = $this->comment;
             $comment->setData($post);
             $comment->setCreatedAt($this->_objectManager->get('Magento\Framework\Stdlib\DateTime\DateTime')->gmtDate());

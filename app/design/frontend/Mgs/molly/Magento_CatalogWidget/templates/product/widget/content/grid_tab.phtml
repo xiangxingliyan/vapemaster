@@ -79,14 +79,24 @@
 				<?php $categoryProducts = $themeHelper->getCategoryProducts($categoryId); ?>
 				<?php $objectManager1 = \Magento\Framework\App\ObjectManager::getInstance(); ?>
 				<?php $currentCate1 = $objectManager->create('Magento\Catalog\Model\Category')->load($categoryId); ?>
+
 				<ol class="product-items products-grid row">
 					<?php $iterator = 1; ?>
 					<?php $i=0; foreach ($categoryProducts as $_item): $i++; ?>
 						<?php if($i > $this->getProductsCount()){ break; } ?>
 						<?php $_productNameStripped = $block->stripTags($_item->getName(), null, true); ?>
-						<li class="item product product-item col-lg-3 col-md-3 col-sm-3 col-xs-6 ">
+						<li class="item product product-item col-lg-3 col-md-3 col-sm-3 col-xs-6  <?php if($i == $this->getProductsCount()){ echo 'last'; } ?>
+">
+
 							<div class="product-item-info product-content">
+
 								<div class="product-top">
+
+									<!-- 判断是否是最后一个，add shop all link -->
+                                    <?php if($i == $this->getProductsCount()): ?>
+										<a href="<?php echo $currentCate1->getUrl(); ?>" class="shop-all-link" title="SHOP ALL">SHOP <br />ALL</a>
+                                    <?php endif; ?>
+
 									<?php
 										$_imagehelper = $this->helper('Magento\Catalog\Helper\Image');
 										$size = $themeHelper->getImageSize();
@@ -103,6 +113,7 @@
 									</a>
 									<?php echo $themeHelper->getProductLabel($_item) ?>
 								</div>
+
 								<div class="product-item-details details product-desc">
 									<div class="top-desc">
 										<div class="text-desc cate-name">
@@ -186,6 +197,8 @@
 										<?php endif; ?>
 									</div>
 								</div>
+
+
 							</div>
 						</li>
 					<?php endforeach ?>

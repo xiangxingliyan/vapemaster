@@ -24,11 +24,6 @@ class Import extends \MGS\Mpanel\Controller\Adminhtml\Mpanel
     protected $_string;
 	
 	/**
-     * @var \Magento\Framework\ObjectManagerInterface
-     */
-    protected $_objectManager;
-	
-	/**
 	 * @var \Magento\Framework\Xml\Parser
 	 */
 	private $_parser;
@@ -46,7 +41,6 @@ class Import extends \MGS\Mpanel\Controller\Adminhtml\Mpanel
      */
     public function __construct(
 		Action\Context $context,
-		\Magento\Framework\ObjectManagerInterface $objectManager,
 		\Magento\Config\Model\Config\Factory $configFactory,
 		\Magento\Framework\Filesystem $filesystem,
 		\Magento\Framework\Xml\Parser $parser,
@@ -55,7 +49,6 @@ class Import extends \MGS\Mpanel\Controller\Adminhtml\Mpanel
         parent::__construct($context);
 		$this->_configFactory = $configFactory;
         $this->_string = $string;
-		$this->_objectManager = $objectManager;
 		$this->_filesystem = $filesystem;
 		$this->_parser = $parser;
     }

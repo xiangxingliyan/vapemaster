@@ -265,6 +265,11 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
     border: 1px solid #222222;
 }
 
+.btn-default.disabled,.btn-default.disabled:hover,.btn-default.disabled:focus,.btn-default.disabled:active{
+    background-color: #222;
+    border-color: #222;
+}
+
 .btn-black{
     background: #222222;
     color: #fff;
@@ -526,6 +531,7 @@ ul,ol {
         .logo{
             display: inline-block;
             width:100%;
+            margin-bottom: 0px;
         }
         .title-logo{
             font-family: "Droid Serif",serif;
@@ -3251,9 +3257,9 @@ body:not(.cms-index-index) {
                     }
                     &:before {
                         color: #8f8f8f;
-                        content: "\f040";
+                        content: "\f044";
                         display: inline-block;
-                        font-family: "luma-icons";
+                        font-family: FontAwesome;
                         font-size: 18px;
                         font-weight: normal;
                         line-height: 20px;
@@ -3393,7 +3399,6 @@ body:not(.cms-index-index) {
         margin-right: 5px;
     }
     .block-customer-login, .block-new-customer {
-        width: 50%;
         padding: 0 20px;
     }
     .block-customer-login {
@@ -4643,7 +4648,7 @@ body:not(.cms-index-index) {
                     }
                     .controls {
                         position: absolute;
-                        right: 0;
+                        right: 5px;
                         top: 16px;
                         .actions-secondary {
                             li{
@@ -6849,7 +6854,45 @@ body:not(.cms-index-index) .page.messages .messages .message {
     margin-bottom: 30px;
 }
 
+.table-wrapper.orders-history {
+    overflow: auto;
+}
 
+.catalog-product-view  .breadcrumbs li.item.product{
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.catalog-product-view  .breadcrumbs li.item.home a {
+    color: #fff;
+}
+
+a.shop-all-link{
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(177,177,177,0.75);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    line-height: 1.2;
+    font-size: 48px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-category-list .product-item.last .product-item-details{
+    display: none;
+}
+
+.products-grid .item.last .product-content:hover .product-top .product-item-photo:after{
+    visibility: hidden;
+}
 
 
 
