@@ -9,6 +9,9 @@
 			<div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 top-bar-left pull-left">
 				<div class="header-freeshipping-tips">
 					<span>FREE DOMESTIC U.S. SHIPPING ABOVE $50</span>
+					<span class="welcome-title" data-bind="text: '<?php echo $block->escapeHtml($welcomeMessage) ?>'">
+						<?php echo $block->escapeHtml($welcomeMessage) ?>
+					</span>
 				</div>
 			</div>
 			<div class="col-lg-8 col-md-8 col-sm-4 col-xs-12 top-bar-right pull-right">
@@ -18,7 +21,7 @@
                     <?php echo $block->getChildHtml('minicart') ?>
 					<div class="switcher top-links" id="top-links">
 						<span class="name" data-mage-init='{"dropdown":{}}' data-toggle="dropdown">
-								<span><i class="user-icon"></i></span>
+								<span><i class="user-icon icon"></i></span>
 						</span>
 						<ul class="menu dropdown switcher-dropdown ui-dialog-content" data-target="dropdown" style="display:none;" data-mage-init='{"dropdownDialog":{
 								"appendTo":"#top-links",

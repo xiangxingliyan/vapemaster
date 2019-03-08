@@ -10,7 +10,6 @@ return array (
     'MGS_Portfolio' => 1,
     'MGS_Promobanners' => 1,
     'Magento_Store' => 1,
-    'MGS_Social' => 1,
     'MGS_StoreLocator' => 1,
     'MGS_Testimonial' => 1,
     'Magento_Directory' => 1,

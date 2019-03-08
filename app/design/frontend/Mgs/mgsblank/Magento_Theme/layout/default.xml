@@ -49,6 +49,7 @@
         <referenceBlock name="advanced-search-link" remove="true"/>
         <referenceBlock name="skip_to_content" remove="true"/>
         <referenceBlock name="authentication-popup" remove="true"/>
+        <referenceBlock name="storelocator" remove="true"/>
 
 
 		<referenceContainer name="footer-container">
