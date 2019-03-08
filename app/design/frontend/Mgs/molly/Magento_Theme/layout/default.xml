@@ -58,6 +58,8 @@
         <referenceBlock name="catalog.compare.sidebar" remove="true"/>
         <referenceBlock name="view.addto.compare" remove="true" />
         <referenceBlock name="category.product.addto.compare" remove="true"/>
+
+        <referenceBlock name="storelocator" remove="true"/>
 		
         <move element="top.search" destination="header"/>
 		<move element="top.search.show" destination="header"/>
@@ -67,6 +69,8 @@
         <referenceBlock name="authentication-popup" remove="true"/>
 		<referenceBlock name="page.main.title" remove="true"/>
 		<referenceBlock name="navigation.sections" remove="true"/>
+
+
 
         <!--remove account nav-->
         <referenceBlock name="customer-account-navigation-my-credit-cards-link" remove="true"/>
