@@ -6,7 +6,29 @@
 			<div id="newsletter-popup">
 				<div class="block-popup-subscribe">
 					<div class="block-popup-top">
-						<?php echo $html;  ?>
+						<?php /*echo $html;  */?>
+
+						<div class="age-verification">
+							<p><img class="img-responsive" src="/media/wysiwyg/logo.png" alt=""></p>
+							<h3 class="age-v-title">AGE VERIFICATION</h3>
+							<p>ARE YOU OF LEGAL AGE TO PURCHASE VAPING PRODUCTTS IN YOUR AREA?</p>
+							<div class="is-age-box">
+								<span class="is-age-btn is-age-yes" id="is_age_yes">YES</span>
+								<span class="is-age-btn is-age-no"  id="is_age_no" onclick="window.location='https://www.google.com/';return false;">NO</span>
+							</div>
+							<p><strong>OUR WEBSITE AND THE PRODUCTS LISTED ON IN ARE INTENDED FOR ADULTS ONLY.</strong></p>
+							<p class="age-v-text">YOU CERTIFY THAT YOU ARE OF LEGAL SMOKING AGE IN THE AREA YOU RESIDE BY CONFIRMING ABOVE AND ENTERING OUR WEBSITE.</p>
+						</div>
+
+						<div class="newsletter-popup-box">
+							<h2>BECOME A MASTER</h2>
+							<p class="desc-popup hidden-xs">SIGN UP TO GET 20% OFF YOUR FIRST PRDER</p>
+                            <?php echo $this->getLayout()
+                                ->createBlock('Magento\Newsletter\Block\Subscribe')
+                                ->setTemplate('subscribe-popup.phtml')
+                                ->toHtml(); ?>
+<!--							<div class="checkbox"><label for="dont_show"> <input id="dont_show" type="checkbox"> Don't show this popup again </label></div>-->
+						</div>
 					</div>
 				</div>
 			</div>
@@ -22,29 +44,36 @@
 					modal
 				) {
 					$(window).load(function () {
-						if($(window).width() > 991) {
-							if(getCookie('newsletterpopup')!='nevershow'){
-								if ($('#newsletter-popup').length) {
-									var options = {
-										type: 'popup',
-										responsive: true,
-										innerScroll: true,
-										title: '',
 
-                                        modalClass:'newsletter-popup',
-										buttons: []
-									};
+						if(getCookie('newsletterpopup')!='nevershow'){
+							if ($('#newsletter-popup').length) {
+								var options = {
+									type: 'popup',
+									responsive: true,
+									innerScroll: true,
+									title: '',
 
-									var newsletterPopup = modal(options, $('#newsletter-popup'));
-                                                                        
-									$('#newsletter-popup').trigger('openModal');
-								}
+									modalClass:'newsletter-popup',
+									buttons: [],
+                                    opened: function($Event) {
+                                        $('.modal-header button.action-close', $Event.srcElement).hide();
+                                    },
+                                    keyEventHandlers: {
+                                        escapeKey: function () { return; }
+                                    }
+								};
+
+								var newsletterPopup = modal(options, $('#newsletter-popup'));
+
+								$('#newsletter-popup').trigger('openModal');
 							}
 						}
+
 					});
 					
-					$('#newsletter-popup .checkbox input').click(function(){
-						dontShowPopup('dont_show');
+					$('#is_age_yes').click(function(){
+                        $('#newsletter-popup').trigger('closeModal');
+						dontShowPopup();
 					});
 					
 					function getCookie(cname) {
@@ -58,15 +87,11 @@
 						return "";
 					} 
 
-					function dontShowPopup(el){
-						if($('#'+el).prop('checked')) {
+					function dontShowPopup(){
 							var d = new Date();
 							d.setTime(d.getTime() + (24*60*60*1000*365));
 							var expires = "expires="+d.toUTCString();
 							document.cookie = 'newsletterpopup' + "=" + 'nevershow' + "; " + expires;
-						} else {
-							document.cookie = 'newsletterpopup' + "= ''; -1";
-						}
 					}
 				}
 			);

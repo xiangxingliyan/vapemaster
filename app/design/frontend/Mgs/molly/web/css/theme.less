@@ -1412,17 +1412,16 @@ body:not(.cms-index-index) {
         display: inline-block;
         text-align: center;
         margin: 0 -4px 0 0;
-
+        float: none;
         a {
-            color: #444444;
+            color: #000;
             padding: 5px 20px;
-            font-size: 24px;
+            font-size: 36px;
+            font-weight: bold;
             text-transform: uppercase;
             display: inline-block;
-            background-color: #edf1f5;
             &:hover {
                 color: #000;
-                background-color: #b66a6a;
             }
         }
 
@@ -1430,7 +1429,7 @@ body:not(.cms-index-index) {
     .item.title.active {
         a {
             color: #000;
-            background-color: #b66a6a;
+
         }
     }
 }
@@ -1485,7 +1484,7 @@ body:not(.cms-index-index) {
 }
 
 body:not(.cms-index-index) #maincontent{
-    background-image: linear-gradient(0deg, #f8f8ff 0%, #ffffff 54%, #f8f8ff 100%);
+    //background-image: linear-gradient(0deg, #f8f8ff 0%, #ffffff 54%, #f8f8ff 100%);
     padding: 60px 0;
 }
 
@@ -4320,33 +4319,26 @@ body:not(.cms-index-index) #maincontent{
     }
 }
 
+
 .newsletter-popup .newsletter-popup {
-    height: 100%;
-    padding-top: 25px;
-    position: absolute;
-    text-align: left;
-    top: 0;
-    width: 100%;
+
     img {
-        height: 46px;
-        margin-left: 20px;
+
         margin-top: 20px;
     }
     h3 {
         color: #111;
-        padding-left: 20px;	
+
         margin-top: 20px;
     }
     .desc-popup {
         color: #111;
         line-height: 24px;
-        padding-left: 20px;
-        width: 363px;
+        width: 55%;
         margin-bottom: 15px !important;
     }
     .block-subscribe {
         padding-bottom: 10px;
-        padding-left: 20px;
         position: relative;
         input, button {
             display: inline-block;
@@ -4375,7 +4367,6 @@ body:not(.cms-index-index) #maincontent{
     }
     .checkbox {
         bottom: 0;
-        padding-left: 20px;
         text-align: left;
         top: auto;
         input {
@@ -4383,6 +4374,89 @@ body:not(.cms-index-index) #maincontent{
         }
     }
 }
+
+.age-verification {
+    padding: 40px 30px 20px;
+    text-align: center;
+    .age-v-title{
+        margin: 30px 0 10px;
+    }
+
+    .img-responsive{
+        margin: 0 auto;
+    }
+
+    .is-age-box {
+        margin: 20px 0;
+    }
+
+    .is-age-btn {
+        width: 166px;
+        height: 45px;
+        line-height: 45px;
+        color: #fff;
+        font-size: 24px;
+        background-color: #b66e6f;
+        display: inline-block;
+        cursor: pointer;
+        &.is-age-yes {
+            margin-right: 30px;
+        }
+    }
+
+    .age-v-text {
+        font-size: 12px;
+    }
+}
+
+.newsletter-popup-box {
+    background-color: #e7eaef;
+    overflow: hidden;
+    text-align: center;
+    h2{
+        margin: 25px 0 10px;
+        font-weight: bold;
+    }
+
+    .desc-popup {
+        font-size: 24px;
+    }
+
+    .field.newsletter {
+        width: 290px;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 14px;
+        text-align: left;
+        .input-text{
+            margin-bottom: 0;
+            border: 0;
+        }
+    }
+    .actions{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 14px;
+        .btn{
+            height: 40px;
+            background-color: #b66e6f;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 5px 20px;
+        }
+    }
+
+    .block.block-subscribe {
+        margin: 10px 0 30px;
+    }
+
+    #newsletter-validate-detail {
+        font-size: 0;
+    }
+
+}
+
 .modal-popup.newsletter-popup .modal-inner-wrap {
     padding: 0;
 }
@@ -6658,7 +6732,7 @@ body:not(.cms-index-index) .page.messages .messages .message {
 .category-tabs {
     .tab-product.category-tabs {
         margin-bottom: 40px;
-        border-bottom: solid 1px #000000;
+        text-align: center;
     }
     position: relative;
     .tab-content {
@@ -6976,6 +7050,15 @@ a.shop-all-link{
 
 .modal-title {
     font-size: 24px;
+}
+
+.header-sticky-menu .navigation ul.nav-main{
+    margin-left: 130px;
+}
+
+.header-sticky-menu .logo-container .logo img{
+    max-width: 200px;
+    height: auto;
 }
 
 
