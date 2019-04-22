@@ -25,7 +25,8 @@ $themeSettings = $themeHelper->getThemeSettings();
 	<script type="text/javascript">
 		require([
 			'jquery',
-			'mgs/owlcarousel'
+			'mgs/owlcarousel',
+            'Magento_Theme/js/picturefill.min'
 		], function(jQuery){
 			(function($) {
 				$(".slider_mgs_carousel").owlCarousel({
@@ -52,3 +53,7 @@ $themeSettings = $themeHelper->getThemeSettings();
 		<div><?php echo __('You need to input identifier for your slider.') ?></div>
 	</div>
 <?php endif ?>
+
+
+
+

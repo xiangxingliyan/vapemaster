@@ -73,7 +73,7 @@
 		</ul>
 		<div class="clear"></div>
 	</div>
-	<div class="tab-content ">
+	<div class="tab-content shop-all-content">
 		<?php $j=0; foreach($conditionCate as $categoryId): $j++; ?>
 			<div id="panel-product-<?php echo $categoryId ?>" class="tab-pane tab-pane<?php echo $j ?> fade <?php if( $j == 1 ): ?>in active<?php endif ?>">
 				<?php $categoryProducts = $themeHelper->getCategoryProducts($categoryId); ?>

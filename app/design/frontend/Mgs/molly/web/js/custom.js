@@ -4,12 +4,18 @@ require([
 	'mgs/counterup' */
 ], function(jQuery){
 	(function($) {
+        function calcMiniCartPosition() {
+            var widthScreen = $(window).width();
+            var widthContainer = $('.header .middle-header-content .container').width();
+            var rightPadding = (widthScreen-widthContainer-24)/2;
+            $('.header .top-bar-right .minicart-wrapper.switcher').css("right", rightPadding+"px");
+        }
+
 		$(document).ready(function(){
 			$('.header .switcher-dropdown').hide();
-			var widthScreen = $(window).width();
-			var widthContainer = $('.header .middle-header-content .container').width();
-			var rightPadding = (widthScreen-widthContainer-24)/2;
-			$('.header .top-bar-right .minicart-wrapper.switcher').css("right", rightPadding+"px");
+
+            calcMiniCartPosition();
+
 			$('.vertical-menu-home .vertical-title').click(function(){
 				$(this).parent().find('.vertical-menu-content').slideToggle('fast');
 			});
@@ -63,8 +69,12 @@ require([
 			});
 		});
 		$(window).load(function(){
-			$('.header .switcher-dropdown').show();
-		});
+            $('.header .switcher-dropdown').show();
+        });
+
+        $(window).resize(function(){
+            calcMiniCartPosition();
+        });
 	})(jQuery);
 	
 });

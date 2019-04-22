@@ -27,5 +27,7 @@
         <container name="page.top" as="page_top" label="After Page Header" after="header.container"/>
         <container name="footer-container" as="footer" before="before.body.end" label="Page Footer Container" htmlTag="footer" htmlClass="footer" />
 		<block class="Magento\Framework\View\Element\Template" name="script" template="Magento_Theme::script.phtml" after="footer-container"/>
+        <block class="Magento\Framework\View\Element\Template" name="newletter_popup" template="Magento_Theme::newletter-popup.phtml" after="script"/>
+
     </referenceContainer>
 </layout>

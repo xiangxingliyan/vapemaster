@@ -2345,6 +2345,7 @@ body:not(.cms-index-index) #maincontent{
                 margin-top: 20px;
                 .tocart {
                   padding: 12px 50px;
+                    margin-bottom: 20px;
                 }
               }
               .qty-product-buy{
@@ -4291,31 +4292,32 @@ body:not(.cms-index-index) #maincontent{
         }
     }
 }
-.cms-index-index {
-    .modal-popup {
-        &._inner-scroll {
-            .modal-content {
-                height: auto;
-                overflow-y: visible;
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
-        .modal-header {
-            position: absolute;
-            right: -5px;
-            top: -8px;
-            .modal-title{display:none;}
-        }
-        p {
-            margin: 0;
-        }
 
-    }
-    .modal-popup.newsletter-popup{
-        .modal-inner-wrap {
-            width: 756px;
+.modal-popup {
+    &._inner-scroll {
+        .modal-content {
+            height: auto;
+            overflow-y: visible;
+            padding-left: 0;
+            padding-right: 0;
         }
+    }
+    .modal-header {
+        position: absolute;
+        right: -5px;
+        top: -8px;
+        .modal-title{display:none;}
+    }
+    p {
+        margin: 0;
+    }
+
+}
+
+
+.modal-popup.newsletter-popup{
+    .modal-inner-wrap {
+        width: 756px;
     }
 }
 
@@ -4722,7 +4724,13 @@ body:not(.cms-index-index) #maincontent{
                 .product-item-name {
                     font-size: 16px;
                     font-weight: 400;
-                    margin-bottom: 8px;			
+                    margin-bottom: 8px;
+                    height: 48px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
                 }
                 .top-desc {
                     padding-bottom: 7px;
@@ -7059,6 +7067,10 @@ a.shop-all-link{
 .header-sticky-menu .logo-container .logo img{
     max-width: 200px;
     height: auto;
+}
+
+.shop-all-content .product-items .item:last-child .product-item-details{
+    display: none;
 }
 
 
