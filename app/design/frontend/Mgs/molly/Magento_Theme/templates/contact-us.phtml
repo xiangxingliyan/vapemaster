@@ -1,0 +1,568 @@
+<style>
+    .icons .icon:hover .icon-hover {
+        opacity: 1;
+    }
+
+    .icon-inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    .icon-hover {
+        opacity: 0;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .contact-us-page .icon {
+        width: 12.5%;
+        float: left;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .icon-title h5 {
+        line-height: 1.4;
+    }
+
+    .contact-us-page {
+        font-size: 16px;
+    }
+
+    .contact-us-page h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .question-item {
+        border: solid 1px #e0e0e0;
+        margin-bottom: 20px;
+
+    }
+
+    .question-title h4 {
+        margin-bottom: 0
+    }
+
+    .question-title:after{
+        content: '\f105';
+        position: absolute;
+        right: 25px
+    }
+
+    .question-answer-text {
+        padding: 10px 15px 0;
+    }
+
+    .question-title {
+        padding: 15px;
+        background-color: #b66a6a;
+        color: #fff;
+        cursor: pointer;
+        position: relative
+    }
+
+    .question-title:after {
+        content:'\f105';
+        position: absolute;
+        right: 25px;
+        content: '\f105';
+        position: absolute;
+        right: 25px;
+        font-family: FontAwesome;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        font-weight: 100;
+    }
+
+    .question-title.collapsed {
+        background-color: #fff;
+        color: #333;
+    }
+
+    .contact-us-page a {
+        color: #b66a6a;
+    }
+</style>
+
+<div class="contact-us-page">
+    <p>At Vapemasterz.com, we want you to love your experience shopping as much as your new vape products.</p>
+    <p>Please feel free to contact our customer service department regarding to any questions or concerns. We are here to help with everything from placing orders, delivery questions and product details.</p>
+    <p>Even if you’re set, we’d still love to hear your feedback. We value your opinions and want to keep on improving to serve you better.&nbsp;</p>
+    <p>&nbsp;</p>
+    <div class="icons clearfix">
+        <div class="row">
+            <div class="icon" data-anchor="orders">
+                <div class="icon-inner"><img src="{{media url=&quot;wysiwyg/order.png&quot;}}" alt="">
+                    <div class="icon-hover"><img src="{{media url=&quot;wysiwyg/order-h.png&quot;}}" alt=""></div>
+                </div>
+                <div class="icon-title">
+                    <h5>Order <br>Issues</h5>
+                </div>
+            </div>
+            <div class="icon" data-anchor="shipping">
+                <div class="icon-inner"><img src="{{media url=&quot;wysiwyg/shipping.png&quot;}}" alt="">
+                    <div class="icon-hover"><img src="{{media url=&quot;wysiwyg/shipping-h.png&quot;}}" alt=""></div>
+                </div>
+                <div class="icon-title">
+                    <h5>Shipping &amp; <br>Handling</h5>
+                </div>
+            </div>
+            <div class="icon" data-anchor="returns">
+                <div class="icon-inner"><img src="{{media url=&quot;wysiwyg/returns.png&quot;}}" alt="">
+                    <div class="icon-hover"><img src="{{media url=&quot;wysiwyg/returns-h.png&quot;}}" alt=""></div>
+                </div>
+                <div class="icon-title">
+                    <h5>Returns &amp; <br>Refunds</h5>
+                </div>
+            </div>
+            <div class="icon" data-anchor="age">
+                <div class="icon-inner"><img src="{{media url=&quot;wysiwyg/age.png&quot;}}" alt="">
+                    <div class="icon-hover"><img src="{{media url=&quot;wysiwyg/age-h.png&quot;}}" alt=""></div>
+                </div>
+                <div class="icon-title">
+                    <h5>Age <br>Verification</h5>
+                </div>
+            </div>
+            <div class="icon" data-anchor="payments">
+                <div class="icon-inner"><img src="{{media url=&quot;wysiwyg/payments.png&quot;}}" alt="">
+                    <div class="icon-hover"><img src="{{media url=&quot;wysiwyg/payments-h.png&quot;}}" alt=""></div>
+                </div>
+                <div class="icon-title">
+                    <h5>Payments &amp; <br>Promos</h5>
+                </div>
+            </div>
+            <div class="icon" data-anchor="stock">
+                <div class="icon-inner"><img src="{{media url=&quot;wysiwyg/stock.png&quot;}}" alt="">
+                    <div class="icon-hover"><img src="{{media url=&quot;wysiwyg/stock-h.png&quot;}}" alt=""></div>
+                </div>
+                <div class="icon-title">
+                    <h5>Stock &amp; <br>Product Issues</h5>
+                </div>
+            </div>
+            <div class="icon" data-anchor="general">
+                <div class="icon-inner"><img src="{{media url=&quot;wysiwyg/general.png&quot;}}" alt="">
+                    <div class="icon-hover"><img src="{{media url=&quot;wysiwyg/general-h.png&quot;}}" alt=""></div>
+                </div>
+                <div class="icon-title">
+                    <h5>General &amp; <br>Technical</h5>
+                </div>
+            </div>
+            <div class="icon" data-anchor="contact">
+                <div class="icon-inner"><img src="{{media url=&quot;wysiwyg/contact.png&quot;}}" alt="">
+                    <div class="icon-hover"><img src="{{media url=&quot;wysiwyg/contact-h.png&quot;}}" alt=""></div>
+                </div>
+                <div class="icon-title">
+                    <h5>Contact <br>Us</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>&nbsp;</p>
+    <div id="orders" class="orders">
+        <h3>ORDER ISSUES</h3>
+        <div class="question-list">
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#orders-q-01">
+                    <h4>I ordered incorrectly, am I able to change an item in my order?</h4>
+                </div>
+                <div id="orders-q-01" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>Unfortunately we are unable to make any item changes to orders once the order has been placed. Alternatively, we may cancel the order if the package has not yet begun processing with our shipping department. Please note that once the package has begun processing, the order will no longer be able to be canceled as the package is being prepped for shipment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#orders-q-02">
+                    <h4>Can I cancel my order?</h4>
+                </div>
+                <div id="orders-q-02" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>We are only able to cancel orders before the order has begun processing with our shipping department. Once an order has been processed for shipment, the order is no longer able to be canceled/refunded. If necessary you may refuse the package at time of delivery. Once we receive the package back at our facility we will be happy to modify or cancel and refund the order.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#orders-q-03">
+                    <h4>I received my package, and an item is missing/incorrect. Can you send me the product that I ordered?</h4>
+                </div>
+                <div id="orders-q-03" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>If you believe that an item in your order is missing/incorrect, please contact us immediately, and we will rectify the issue for you. Please be sure to include your order number, along with images of the invoice and products that you received. In regards to the invoice, please send us a complete image of the entire document where all text is visible. Upon reviewing the email, we will send you a prepaid return label at no charge to you to return to item back to us in exchange for the correct product.</p>
+                        <p>Please send this information to&nbsp;<a href="mailto:returns@vapemasterz.com">returns@vapemasterz.com</a></p>
+                        <p>Please note that all "Dead on Arrivals" (DOA), Missing, or Wrong Item claims must be reported back to us within 48-hours from the time of delivery. Please ensure to carefully inspect your items upon receiving the package, as it is the responsibility of the recipient to check the contents of the order within the designated time window, and to notify us if any issues are found.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#orders-q-04">
+                    <h4>My order was shipped to the wrong address, what happened?</h4>
+                </div>
+                <div id="orders-q-04" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>If you have confirmed that the shipping address listed on your order is invalid/incorrect, you may contact USPS to arrange mail-forwarding, or to arrange pick-up at your local post office. Alternatively, if the order’s tracking history shows that the courier returned your package to the original sender, we will be able to make the necessary adjustments to your order once it is received back at our facility. Please contact us regarding the matter with your updated shipping address and we will have it on file to update your shipping address.</p>
+                        <p><a>https://www.usps.com/help/contact-us.htm</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#orders-q-05">
+                    <h4>I forgot to sign into my account before I placed an order, can I link the order to my account and claim my earned rewards points?</h4>
+                </div>
+                <div id="orders-q-05" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>Unfortunately, we are unable to link placed orders to existing customer accounts after the order has been placed. Alternatively, we may apply the earned rewards points from your recent order to your VapeMasterz.com account. You may contact us regarding the matter, and we will be sure to issue the rewards points to you. Please include the order number and your VapeMasterz.com account information at the time of your initial email to us.</p>
+                        <p><a href="mailto:customerservice@vapemasterz.com">customerservice@vapemasterz.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="shipping" class="shipping">
+        <h3>SHIPPING &amp; HANDLING</h3>
+        <div class="question-list">
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#shipping-q-01">
+                    <h4>I just placed my order, when will it be shipped?</h4>
+                </div>
+                <div id="shipping-q-01" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>There is a 24-48 hour processing time for all orders, with most orders sent out for delivery within 24 business hours. We strive to ship orders out as quickly as possible with processing priority to customers with paid shipping. After the processing period, a TRACKING EMAIL will automatically sent to the email on the order to showcase that the package is ready for shipment and sent to USPS for shipping deliveries.</p>
+                        <p>Our order processing time is 24-48 business hours once the order has been placed, excluding weekends and holidays. If Free First Class Shipping was selected as your shipping method at the time of checkout, the order will require the full 48 hours to be processed. NOTE: During the busy holiday season or after holiday promotion, processing can take up to 72 business hours. Please refer to the table below for more information on the expected delivery time of your order:</p>
+                        <p><strong>Priority Mail</strong> (2-4 business days in transit)</p>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Orders placed on:</th>
+                                    <th>Will ship out by:</th>
+                                    <th>Expected shipping:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>Mon - Tues</td>
+                                    <td>2-4 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>Tues - Wed</td>
+                                    <td>2-4 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>Wed - Thur</td>
+                                    <td>2-4 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>Thur - Fri</td>
+                                    <td>2-4 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>Friday</td>
+                                    <td>2-4 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>Monday</td>
+                                    <td>2-4 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>Monday</td>
+                                    <td>2-4 business days</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>First Class Mail</strong> (4-10 business days in transit)</p>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Orders received on:</th>
+                                    <th>Will ship out by:</th>
+                                    <th>Expected shipping time:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sunday</td>
+                                    <td>Tuesday</td>
+                                    <td>4-10 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Monday</td>
+                                    <td>Wednesday</td>
+                                    <td>4-10 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Tuesday</td>
+                                    <td>Thursday</td>
+                                    <td>4-10 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td>Friday</td>
+                                    <td>2-4 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td>Friday</td>
+                                    <td>4-10 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td>Tuesday</td>
+                                    <td>4-10 business days</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturday</td>
+                                    <td>Tuesday</td>
+                                    <td>4-10 business days</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#shipping-q-02">
+                    <h4>I did not receive a confirmation number, where is it?</h4>
+                </div>
+                <div id="shipping-q-02" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>Order confirmation emails are sent within 12-hours of the order being placed. If a contact email was not provided at the time of checkout, or an incorrect/invalid email address was entered, the confirmation email will not be properly sent to your inbox. Please also be sure to check your spam/junk folder if it does not appear in your inbox. Please verify the information at the time of checkout to avoid further issues. If you believe that the email was not received due to the reasons mentioned, please feel free to contact us regarding the matter and we will provide you with your order number along with your tracking number (if the order has already begun processing).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#shipping-q-03">
+                    <h4>I was sent a tracking number, but the order shows that it is still in pre-shipment. What is the status of my order?</h4>
+                </div>
+                <div id="shipping-q-03" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>Shipping labels are created prior to the order being shipped, which creates a corresponding tracking number for the package. Once created, you will receive a shipping confirmation email; please note that this does not indicate that the order has been shipped out. During this stage in the fulfillment process the order will process through our shipping department in preparation for shipment. In the event that an item in your order is unavailable, you will receive an email from our customer service team to resolve any issues. Additionally, the tracking will update once the package is received and scanned by the courier.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#shipping-q-04">
+                    <h4>How can I be eligible for Free First Class Shipping?</h4>
+                </div>
+                <div id="shipping-q-04" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>We currently offer free first class shipping for all US orders valuing over $50 (excluding applicable tax). Please note that the default shipping method is automatically selected as Priority Mail (2-4 business days), therefore requiring a manual selection for the free first class shipping option. Once your cart reaches the minimum amount of $50, the free shipping option will be made available for selection. Unfortunately, international orders are not eligible for free first class shipping, regardless of the order exceeding the $50 minimum requirement for eligibility.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#shipping-q-05">
+                    <h4>Do you ship orders in discreet packaging?</h4>
+                </div>
+                <div id="shipping-q-05" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>We currently ship all orders in discreet packaging with no logos or labels of affiliation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#shipping-q-06">
+                    <h4>Do you ship internationally?</h4>
+                </div>
+                <div id="shipping-q-06" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>Yes, we currently ship to most countries globally. If your country is not listed during the checkout process, we are unable to accept payment from OR ship to your country at this time. Please view our Shipping &amp; Handling page for more information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="returns" class="returns">
+        <h3>RETURNS &amp; REFUNDS</h3>
+        <div class="question-list">
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#returns-q-01">
+                    <h4>Do the items i purchased from your website include warranty?</h4>
+                </div>
+                <div id="returns-q-01" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>We currently offer a 30-day after sales limited warranty for all manufacturer defective items purchased from our website, with some restrictions*. The warranty period will begin once the package has been delivered in correspondence to the order’s tracking history. Once the item has been in the hands of the customer after the warranty period, the item(s) will be no longer eligible for a refund/replacement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#returns-q-02">
+                    <h4>What is the process if my product is found to be defective?</h4>
+                </div>
+                <div id="returns-q-02" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>If you receive a defective product from our website, please notify us within our 30-day after sales warranty period and we will be sure to assist you in the returns process. Prior to contacting us please ensure to include the following items in your email for a speedy process:</p>
+                        <p>Order number</p>
+                        <p>Images / Video of the defective item, clearly showing the issue at hand</p>
+                        <p>A detailed description of the issue you are facing with the product</p>
+                        <p>Please send the above information to returns@vapemasterz.com</p>
+                        <p>Please note that all minor scratches, cosmetic issues, and discoloration are considered normal wear and tear, which are not covered by our warranty.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#returns-q-03">
+                    <h4>Can I return items on my entire order back?</h4>
+                </div>
+                <div id="returns-q-03" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>Orders placed online with VapeMasterz.com&nbsp;have a 30 Day Return Policy. We gladly accepts returns of unopened, unused, undamaged, or defective items purchased on our website for a refund or exchange within 30 days of original purchase. Please email us if you have any questions and the more details you are able to provide, the faster the situation can be handle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="age" class="age">
+        <h3>AGE VERIFICATION</h3>
+        <div class="question-list">
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#age-q-01">
+                    <h4>I am unable to verify my age during checkout, how do i proceed with placing my order?</h4>
+                </div>
+                <div id="age-q-01" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>If our system is unable to verify your legal age, you may alternatively send us an email containing an image of a valid government issued ID, and we will manually review your information to verify your legal age in the corresponding state of residence. You are more than welcome to cover or sensor any sensitive information such as your Driver License or Passport number. Once your account has been verified, you will no longer be asked to provide ID upon checkout while logged into your VapeMasterz.com account.</p>
+                        <p>Due to the recent FDA regulations placed last year, we are required by law to check a valid ID in order to verify that you are of age in your state to purchase products from our website.</p>
+                        <p>Please note that we currently use Veratad Technologies Age Verification for all age verification screenings on our website.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="payments" class="payment">
+        <h3>PAYMENT &amp; PROMOS</h3>
+        <div class="question-list">
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#payment-q-01">
+                    <h4>I received a “Gateway Error” message when attempting to place my order, and a pending charge was posted to my account. Did my order go through?</h4>
+                </div>
+                <div id="payment-q-01" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>If you received a “Gateway error”, and did not receive an order confirmation email, this may be the result of a declined transaction. A “Gateway Error” indicates that the card used for purchase was declined. Your card may have been declined due to an incorrect billing address entered at the time of checkout (including the name on the card). Please note that the billing information must accurately match the information attached to the card, as any discrepancies will result in a failure to place an order. Additionally, you may verify the billing information on file with your banking institution. If you see a pending charge on your account, it is important to note that this is not an actual charge. Since the card was declined, we were unable to receive any payments from you. Therefore, the pending charge is the result of the card issuer holding the funds from your account that were intended to be used for a purchase. The funds should become re-available to you within 2-3 business days (depending on the processing time of the card issuer). Alternatively, you may contact your banking institution to inquire about expediting the process to release the funds back into your account.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#payment-q-02">
+                    <h4>Can I apply a coupon code after I have placed an order?</h4>
+                </div>
+                <div id="payment-q-02" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>Unfortunately, we are unable to apply coupon codes to orders after they have been placed. Please ensure to input your coupon code prior to purchase to be receive any available discounts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#payment-q-03">
+                    <h4>What will happen if an item in my order is found to be Out-of-Stock?</h4>
+                </div>
+                <div id="payment-q-03" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>In a rare case that an item that you purchased is found to be out of stock during the fulfillment process a member from our support team will contact you immediately to inquire about a possible substitution. Please note that in certain circumstances, we reserve the right to issue a refund for an out of stock item and to ship out the rest of the contents of the order in an effort to minimize any further delays. Alternatively, if the out of stock item greatly affects the rest of the order, we may issue a full refund for the order.</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="stock" class="stock">
+        <h3>STOCK &amp; PRODUCT ISSUES</h3>
+        <div class="question-list">
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#stock-q-01">
+                    <h4>How long does it take to restock items?</h4>
+                </div>
+                <div id="stock-q-01" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>Normally, popular items are restocked within 2 weeks. However, we do not guarantee that some items will be restocked on our website.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#stock-q-02">
+                    <h4>Are batteries included with starter kits and box mods?</h4>
+                </div>
+                <div id="stock-q-02" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>Unfortunately, the majority of the devices on our website do not include batteries as several manufacturers do not include them with the devices. You may verify if the device you wish to purchase contains batteries by reviewing the product description on the corresponding product listing page. However we do offer a number of different brands and types of external batteries at a discounted price when purchased with a device. You can find the external battery add-on option on any listing for starter kits and box mods that require them. You can also browse through our catalog of batteries:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="general" class="general">
+        <h3>GENERAL &amp; TECHNICAL ISSUES</h3>
+        <div class="question-list">
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#general-q-01">
+                    <h4>Do you offer phone support?</h4>
+                </div>
+                <div id="general-q-01" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>Unfortunately, we currently do not offer phone support at this time, as our most efficient method of communication to our customers is via email. Our normal response time is between 24-48 business hours, excluding weekends and holidays.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#general-q-02">
+                    <h4>Where are you located?</h4>
+                </div>
+                <div id="general-q-02" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>We are currently located in Los Angeles, CA, and ship all packages from our facility.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="question-item">
+                <div class="question-title collapsed" data-toggle="collapse" data-target="#general-q-03">
+                    <h4>What are your hours of operation?</h4>
+                </div>
+                <div id="general-q-03" class="question-answer collapse">
+                    <div class="question-answer-text">
+                        <p>Our current hours of operation are from 9AM - 4PM PST, Monday - Friday, excluding holidays.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="contact">
+        <h3>CONTACT US</h3>
+        <div class="question-list">
+            <p><strong>Have additional questions or comments?</strong></p>
+            <p>lease make sure to read the common FAQs above for the quickest answers to the most popular inqueries. We will respond to every email within 24 business hours in the order we received them, excluding weekends and holidays. Our normal operation hours are from 9AM to 4PM (PST) on Monday-Friday, excluding weekends and holidays. To avoid any delay or confusion, we ask that you reach out to us from the contact email provided on your order. At the moment, we currently do not offer phone support.</p>
+            <p><strong>By Email (Please include your full name, order number, email address on order - If applicable):</strong></p>
+            <p><strong>FOR SHIPPING SPEED OR TRACKING INFORMATION - Please see the timetable above located under Shipping &amp; Handling - "I just placed my order, when will it be shipped?"</strong></p>
+            <p><strong>General Information</strong></p>
+            <p><a href="mailto:CustomerService@VapeMasterz.com">CustomerService@VapeMasterz.com</a></p>
+            <p><strong>Defective Items / Returns &amp; Exchanges</strong></p>
+            <p><a href="mailto:Returns@VapeMasterz.com">Returns@VapeMasterz.com</a></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    require(['jquery'], function($) {
+        $(function() {
+            $(document).on('click', '.icon[data-anchor]', function() {
+                var id = '#' + $(this).attr('data-anchor');
+                $('html, body').animate({
+                    scrollTop: $(id).offset().top - $('.navbar-collapse').height() - 25
+                }, 500);
+            });
+        });
+    })
+</script>

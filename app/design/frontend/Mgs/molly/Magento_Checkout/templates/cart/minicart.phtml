@@ -8,14 +8,21 @@
 
 /** @var $block \Magento\Checkout\Block\Cart\Sidebar */
 ?>
+<style>
+.minicart-wrapper .showcart .counter.empty {
+    display: none;
+}
+</style>
 
 <div data-block="minicart" class="minicart-wrapper block-cart-header switcher ">
     <a class="action showcart" href="<?php echo $block->getShoppingCartUrl(); ?>"
        data-bind="scope: 'minicart_content'">
         <span class="text"><i class="cart-icon icon"></i></span>
-        <span class="counter qty empty"
-              data-bind="css: { empty: cart().summary_count == 0 }, blockLoader: isLoading">
+        <span class="counter qty empty "
+              data-bind="css: { empty: cart().summary_count == 0 }, css: { empty: !cart().summary_count}, blockLoader: isLoading">
+        
             <span class="counter-number"><!-- ko text: cart().summary_count --><!-- /ko --></span>
+		
         </span>
 		<span class="cart-count"><!-- ko text: cart().summary_count --><!-- /ko --></span><span class="cart-count-text">&nbsp;<?php echo __('items') ?></span>
     </a>
